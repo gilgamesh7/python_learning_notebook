@@ -98,5 +98,76 @@ def _(train_test_split, x, y):
     return
 
 
+@app.cell
+def _():
+    from sklearn.linear_model import LinearRegression
+
+    return (LinearRegression,)
+
+
+@app.cell
+def _(np):
+    x2 = np.arange(20).reshape(-1,1)
+    y2 = np.array([5, 12, 11, 19, 30, 29, 23, 40, 51, 54, 74,62, 68, 73, 89, 84, 89, 101, 99, 106])
+
+    print(f"{x2=}")
+    print(f"{y2=}")
+    return x2, y2
+
+
+@app.cell
+def _(train_test_split, x2, y2):
+    # dataset is divided into a training set with twelve observations and a test set with eight observations
+    x_train_5, x_test_5, y_train_5, y_test_5 = train_test_split(x2, y2, test_size=8, random_state=0)
+
+    print(f"{x_train_5=}")
+    print(f"{x_test_5=}")
+    print(f"{y_train_5=}")
+    print(f"{y_test_5=}")
+    return x_test_5, x_train_5, y_test_5, y_train_5
+
+
+@app.cell
+def _(LinearRegression, x_train_5, y_train_5):
+    # use the training set to fit the model
+
+    model = LinearRegression().fit(x_train_5, y_train_5)
+
+    print(f"Best Intercept : {model.intercept_}")
+    print(f"Best slope : {model.coef_}")
+    return (model,)
+
+
+@app.cell
+def _(model, x_test_5, x_train_5, y_test_5, y_train_5):
+    print(f"Coefficient of distribution using training data : {model.score(x_train_5, y_train_5)}")
+    print(f"Coefficient of distribution using testing data : {model.score(x_test_5, y_test_5)}")
+    return
+
+
+@app.cell
+def _(model, np, x_test_5, x_train_5, y_test_5, y_train_5):
+    # Plot data with line of regression
+
+    import matplotlib.pyplot as plt
+
+    plt.figure(figsize=(10, 6))
+
+    plt.scatter(x_train_5, y_train_5, color='blue', label='Training data', s=80, marker='o')
+    plt.scatter(x_test_5, y_test_5, color='red', label='Test data', s=80, marker='^')
+
+    # Regression line
+    x_line = np.linspace(0, 20, 100).reshape(-1, 1)  # Smooth line from 0 to 20
+    y_line = model.predict(x_line)
+    plt.plot(x_line, y_line, color='green', label='Regression line', linewidth=2)
+
+
+    plt.legend()
+    plt.grid(True)
+
+    plt.show()
+    return
+
+
 if __name__ == "__main__":
     app.run()
