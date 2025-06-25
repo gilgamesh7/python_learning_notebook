@@ -169,5 +169,65 @@ def _(model, np, x_test_5, x_train_5, y_test_5, y_train_5):
     return
 
 
+@app.cell
+def _(train_test_split):
+    # Regression example with Big dataset
+
+    from sklearn.datasets import fetch_california_housing
+
+    """
+    return_X_y=True returns a tuple with two NumPy arrays:
+    A two-dimensional array with the inputs
+    A one-dimensional array with the outputs
+    """
+
+    x, y = fetch_california_housing(return_X_y=True)
+
+    x_train_6, x_test_6, y_train_6, y_test_6 = train_test_split(x, y, test_size=0.4, random_state=0)
+
+
+
+    return x, x_test_6, x_train_6, y, y_test_6, y_train_6
+
+
+@app.cell
+def _(LinearRegression, x_test_6, x_train_6, y_test_6, y_train_6):
+    # Model 1 - Linear Regression 
+
+    model_2 = LinearRegression().fit(x_train_6, y_train_6)
+
+    print(f"Coefficient of distribution using training data : {model_2.score(x_train_6, y_train_6)}")
+    print(f"Coefficient of distribution using testing data : {model_2.score(x_test_6, y_test_6)}")
+    print(f"Best Intercept : {model_2.intercept_}")
+    print(f"Best slope : {model_2.coef_}")
+    return
+
+
+@app.cell
+def _(x_test_6, x_train_6, y_test_6, y_train_6):
+    # Model 2 - Gradient Boosting
+    from sklearn.ensemble import GradientBoostingRegressor
+
+    model_3 = GradientBoostingRegressor(random_state=0).fit(x_train_6, y_train_6)
+
+    print(f"Coefficient of distribution using training data : {model_3.score(x_train_6, y_train_6)}")
+    print(f"Coefficient of distribution using testing data : {model_3.score(x_test_6, y_test_6)}")
+
+    return
+
+
+@app.cell
+def _(x_test_6, x_train_6, y_test_6, y_train_6):
+    # Model 3 - Random Forest 
+
+    from sklearn.ensemble import RandomForestRegressor
+
+    model_4 = RandomForestRegressor(random_state=0).fit(x_train_6, y_train_6)
+
+    print(f"Coefficient of distribution using training data : {model_4.score(x_train_6, y_train_6)}")
+    print(f"Coefficient of distribution using testing data : {model_4.score(x_test_6, y_test_6)}")
+    return
+
+
 if __name__ == "__main__":
     app.run()
