@@ -11,11 +11,6 @@ def _():
 
 
 @app.cell
-def _():
-    return
-
-
-@app.cell
 def _(mo):
     mo.md(r"""# [Ways to Define Functions in Python](https://youtu.be/OdDI-5PBpSk?si=FC0bBIxiOYGxaL5x)""")
     return
@@ -86,7 +81,7 @@ def _():
         return number*2
 
     double(15)
-            
+
     return
 
 
@@ -100,7 +95,7 @@ def _():
 
     greet_dunder = Greeter()
     print(greet_dunder("Kristin"))
-        
+
     return
 
 
@@ -204,6 +199,48 @@ def _(types):
 
     print(func(5))  # ✅ Output: 47
 
+
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(r"""# [Class methods in APIs](https://youtu.be/Ov8JsEnNLCM?si=ZMUopDQZtXcfHAIw)""")
+    return
+
+
+@app.cell
+def _():
+    from pydantic import BaseModel, EmailStr
+    from uuid import uuid4
+    import json
+
+    fake_user_db = {
+        str(uuid4()) : {"id": str(uuid4()), "name": "John Doe", "email": "john.doe@example.com"},
+        str(uuid4()): {"id": str(uuid4()), "name": "Jane Smith", "email": "jane.smith@example.com"},
+        str(uuid4()): {"id": str(uuid4()), "name": "Raj Patel", "email": "raj.patel@example.com"}
+    }
+
+    class User(BaseModel):
+        id: str
+        name : str
+        email : EmailStr
+
+        @classmethod
+        def find(cls, token:str)-> list["User"]:
+            # json_data = json.dumps(fake_user_db, indent=4)
+        
+            return [cls(**user) for user in fake_user_db.values()]
+
+            # return [user for user in fake_user_db.values()]
+
+    
+    print(User.find("secret_token")) 
+    print(f"\n")
+
+    # [User(id='04aaff2c-96fe-45a5-a44d-ac7c5ff19900', name='John Doe', email='john.doe@example.com'), User(id='b2fc851d-8edd-40ac-9d0f-0bee655a5f77', name='Jane Smith', email='jane.smith@example.com'), User(id='dc7e0322-a646-41c1-b525-e9b18eb3e18c', name='Raj Patel', email='raj.patel@example.com')]
+
+    # [{'id': '33c38c93-6305-457e-984c-8eb35b75c54b', 'name': 'John Doe', 'email': 'john.doe@example.com'}, {'id': '64bd7a22-ae67-469d-9501-7d370e3c0f1a', 'name': 'Jane Smith', 'email': 'jane.smith@example.com'}, {'id': '9a69fd31-2961-43c0-989d-5653f71c3b89', 'name': 'Raj Patel', 'email': 'raj.patel@example.com'}]
 
     return
 

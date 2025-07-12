@@ -1,0 +1,105 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.13.15"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "d5eb3b3f511912a58300a024c9c85d8f",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "9d76f3525660cff34fd7ee66e02a9302",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "67e529e8481b19d9f2aa150aadc252a0",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "8131280ba3276e823c3453e7b85f0654",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "bfd537caedf5384e16e3761041d3325d",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "6ff3653ece098ab1d360661b955854bc",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "3bbead6d04fc06706289ffac8e8155a1",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "ede0e2badc756002e0798465e79c45f5",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "RGSE",
+      "code_hash": "f6c52f40744d97f6963a1d4944406e06",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "Kclp",
+      "code_hash": "f51ec77e3a6f91d12a9323fabcce6da0",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "emfo",
+      "code_hash": "3efe386c30557b06bf1e92ec26354df7",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "Hstk",
+      "code_hash": "bf898cb3b20298652ffcaef717334b99",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "nWHF",
+      "code_hash": "3168a0b32a1a9ee9cd1522f4860b69fe",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "[User(id='04aaff2c-96fe-45a5-a44d-ac7c5ff19900', name='John Doe', email='john.doe@example.com'), User(id='b2fc851d-8edd-40ac-9d0f-0bee655a5f77', name='Jane Smith', email='jane.smith@example.com'), User(id='dc7e0322-a646-41c1-b525-e9b18eb3e18c', name='Raj Patel', email='raj.patel@example.com')]\n\n\n"
+        }
+      ]
+    }
+  ]
+}
