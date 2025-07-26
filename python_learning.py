@@ -11,6 +11,16 @@ def _():
 
 
 @app.cell
+def _():
+    #  Pandas example using builder pattern
+
+    import pandas as pd
+
+    df = pd.DataFrame()
+    return
+
+
+@app.cell
 def _(mo):
     mo.md(r"""# [Ways to Define Functions in Python](https://youtu.be/OdDI-5PBpSk?si=FC0bBIxiOYGxaL5x)""")
     return
@@ -229,12 +239,12 @@ def _():
         @classmethod
         def find(cls, token:str)-> list["User"]:
             # json_data = json.dumps(fake_user_db, indent=4)
-        
+
             return [cls(**user) for user in fake_user_db.values()]
 
             # return [user for user in fake_user_db.values()]
 
-    
+
     print(User.find("secret_token")) 
     print(f"\n")
 
@@ -242,6 +252,99 @@ def _():
 
     # [{'id': '33c38c93-6305-457e-984c-8eb35b75c54b', 'name': 'John Doe', 'email': 'john.doe@example.com'}, {'id': '64bd7a22-ae67-469d-9501-7d370e3c0f1a', 'name': 'Jane Smith', 'email': 'jane.smith@example.com'}, {'id': '9a69fd31-2961-43c0-989d-5653f71c3b89', 'name': 'Raj Patel', 'email': 'raj.patel@example.com'}]
 
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(r"""**[Builder for HTML page](https://youtu.be/2f1FkGQTarc?si=EKWlKxoA1b7lBkCS)**""")
+    return
+
+
+@app.cell
+def _():
+    from dataclasses import dataclass
+
+    @dataclass
+    class HTMLPage:
+        title: str
+        body: str
+
+        def render(self)-> str:
+            return f"""
+                <html>
+                    <head>
+                        <title> {self.title} </title>
+                    </head>
+                    <body>
+                        {self.body}
+                    </body>
+                </html>
+            """
+
+    page = HTMLPage(
+        title="In God we Trust",
+        body="<h1>In God We Trust</h1><p> All others must pay cash</p>"
+    )
+
+    print(page.render())
+
+    return (HTMLPage,)
+
+
+@app.cell
+def _(HTMLPage, mo):
+    # Use builder for above
+
+    from typing import Self
+
+    class HTMLBuilder():
+        def __init__(self, title: str):
+            self.title = title
+            self.body_content = []
+
+        def add_heading(self, text: str, level: int=1)-> Self :
+            self.body_content.append(f"<h{level}> {text} </h{level}>")
+
+            return self
+
+        def add_paragraph(self, text: str)-> Self:
+            self.body_content.append(f"<p> {text} </p>")
+
+            return self
+
+        def build(self)-> HTMLPage:
+            body = "\n".join(self.body_content)
+            return HTMLPage(title=self.title, body=body)
+
+    page1 = HTMLBuilder("In God We Trust").add_heading("Webpage using builder pattern").add_paragraph("A paragraph being built using builder pattern").build()
+    # builder.add_heading("Webpage using builder pattern")
+    # builder.add_paragraph("A paragraph being built using builder pattern")
+    # page1 = builder.build()
+
+    print(page1.render())
+    mo.Html(page1.render())
+    return
+
+
+@app.cell
+def _(mo):
+    #  Pandas example using builder pattern
+
+    import pandas as pd
+
+    df = pd.DataFrame({"A":[1,2],"B":[3,4]})
+    print(f"No Styling : \n {df.to_html()}\n\n")
+
+
+    styled = (
+        df.style.set_caption("Styled Dataframe").background_gradient(cmap="viridis").format("{:.2f}")
+    )
+    print(f"Styled : \n {styled.to_html()}")
+
+
+    mo.Html(styled.to_html())
+    # mo.Html(df.to_html())
     return
 
 

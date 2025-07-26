@@ -6,7 +6,7 @@
   "cells": [
     {
       "id": "Hbol",
-      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "code_hash": "2a8ba72d540ab8ec8f74cd18068f352f",
       "outputs": [],
       "console": []
     },
@@ -84,7 +84,26 @@
     },
     {
       "id": "nWHF",
-      "code_hash": "3168a0b32a1a9ee9cd1522f4860b69fe",
+      "code_hash": "1304075ed88798076454d4ff9e4a8786",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "iLit",
+      "code_hash": "8514b4e48354194924dfdf239edd8a85",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<span class=\"markdown prose dark:prose-invert\"><span class=\"paragraph\"><strong><a href=\"https://youtu.be/2f1FkGQTarc?si=EKWlKxoA1b7lBkCS\" rel=\"noopener\" target=\"_blank\">Builder for HTML page</a></strong></span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZHCJ",
+      "code_hash": "b961ff41f94e79df26169e3abb1e1a5f",
       "outputs": [
         {
           "type": "data",
@@ -97,9 +116,47 @@
         {
           "type": "stream",
           "name": "stdout",
-          "text": "[User(id='04aaff2c-96fe-45a5-a44d-ac7c5ff19900', name='John Doe', email='john.doe@example.com'), User(id='b2fc851d-8edd-40ac-9d0f-0bee655a5f77', name='Jane Smith', email='jane.smith@example.com'), User(id='dc7e0322-a646-41c1-b525-e9b18eb3e18c', name='Raj Patel', email='raj.patel@example.com')]\n\n\n"
+          "text": "\n            <html>\n                <head>\n                    <title> In God we Trust </title>\n                </head>\n                <body>\n                    <h1>In God We Trust</h1><p> All others must pay cash</p>\n                </body>\n            </html>\n        \n"
         }
       ]
+    },
+    {
+      "id": "ROlb",
+      "code_hash": "d6c0f2a88666117732466f3826c37231",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "\n            <html>\n                <head>\n                    <title> In God We Trust </title>\n                </head>\n                <body>\n                    <h1> Webpage using builder pattern </h1>\n<p> A paragraph being built using builder pattern </p>\n                </body>\n            </html>\n        "
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "\n            <html>\n                <head>\n                    <title> In God We Trust </title>\n                </head>\n                <body>\n                    <h1> Webpage using builder pattern </h1>\n<p> A paragraph being built using builder pattern </p>\n                </body>\n            </html>\n        \n"
+        }
+      ]
+    },
+    {
+      "id": "qnkX",
+      "code_hash": "7d6f698ffd54dbc0c012706dbc2c0bfa",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "PdRw",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
     }
   ]
 }
