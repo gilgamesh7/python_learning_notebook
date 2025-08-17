@@ -6,156 +6,116 @@
   "cells": [
     {
       "id": "Hbol",
-      "code_hash": "2a8ba72d540ab8ec8f74cd18068f352f",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
       "outputs": [],
       "console": []
     },
     {
       "id": "MJUe",
-      "code_hash": "d5eb3b3f511912a58300a024c9c85d8f",
+      "code_hash": "849ff8ddafe32a5106a4c4d23776f644",
       "outputs": [],
       "console": []
     },
     {
       "id": "vblA",
-      "code_hash": "9d76f3525660cff34fd7ee66e02a9302",
+      "code_hash": "d5eb3b3f511912a58300a024c9c85d8f",
       "outputs": [],
       "console": []
     },
     {
       "id": "bkHC",
-      "code_hash": "67e529e8481b19d9f2aa150aadc252a0",
+      "code_hash": "9d76f3525660cff34fd7ee66e02a9302",
       "outputs": [],
       "console": []
     },
     {
       "id": "lEQa",
-      "code_hash": "8131280ba3276e823c3453e7b85f0654",
+      "code_hash": "67e529e8481b19d9f2aa150aadc252a0",
       "outputs": [],
       "console": []
     },
     {
       "id": "PKri",
-      "code_hash": "bfd537caedf5384e16e3761041d3325d",
+      "code_hash": "8131280ba3276e823c3453e7b85f0654",
       "outputs": [],
       "console": []
     },
     {
       "id": "Xref",
-      "code_hash": "6ff3653ece098ab1d360661b955854bc",
+      "code_hash": "bfd537caedf5384e16e3761041d3325d",
       "outputs": [],
       "console": []
     },
     {
       "id": "SFPL",
-      "code_hash": "3bbead6d04fc06706289ffac8e8155a1",
+      "code_hash": "6ff3653ece098ab1d360661b955854bc",
       "outputs": [],
       "console": []
     },
     {
       "id": "BYtC",
-      "code_hash": "ede0e2badc756002e0798465e79c45f5",
+      "code_hash": "3bbead6d04fc06706289ffac8e8155a1",
       "outputs": [],
       "console": []
     },
     {
       "id": "RGSE",
-      "code_hash": "f6c52f40744d97f6963a1d4944406e06",
+      "code_hash": "ede0e2badc756002e0798465e79c45f5",
       "outputs": [],
       "console": []
     },
     {
       "id": "Kclp",
-      "code_hash": "f51ec77e3a6f91d12a9323fabcce6da0",
+      "code_hash": "f6c52f40744d97f6963a1d4944406e06",
       "outputs": [],
       "console": []
     },
     {
       "id": "emfo",
-      "code_hash": "3efe386c30557b06bf1e92ec26354df7",
+      "code_hash": "f51ec77e3a6f91d12a9323fabcce6da0",
       "outputs": [],
       "console": []
     },
     {
       "id": "Hstk",
-      "code_hash": "bf898cb3b20298652ffcaef717334b99",
+      "code_hash": "3efe386c30557b06bf1e92ec26354df7",
       "outputs": [],
       "console": []
     },
     {
       "id": "nWHF",
-      "code_hash": "1304075ed88798076454d4ff9e4a8786",
+      "code_hash": "bf898cb3b20298652ffcaef717334b99",
       "outputs": [],
       "console": []
     },
     {
       "id": "iLit",
-      "code_hash": "8514b4e48354194924dfdf239edd8a85",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/html": "<span class=\"markdown prose dark:prose-invert\"><span class=\"paragraph\"><strong><a href=\"https://youtu.be/2f1FkGQTarc?si=EKWlKxoA1b7lBkCS\" rel=\"noopener\" target=\"_blank\">Builder for HTML page</a></strong></span></span>"
-          }
-        }
-      ],
-      "console": []
-    },
-    {
-      "id": "ZHCJ",
-      "code_hash": "b961ff41f94e79df26169e3abb1e1a5f",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/plain": ""
-          }
-        }
-      ],
-      "console": [
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "\n            <html>\n                <head>\n                    <title> In God we Trust </title>\n                </head>\n                <body>\n                    <h1>In God We Trust</h1><p> All others must pay cash</p>\n                </body>\n            </html>\n        \n"
-        }
-      ]
-    },
-    {
-      "id": "ROlb",
-      "code_hash": "d6c0f2a88666117732466f3826c37231",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/html": "\n            <html>\n                <head>\n                    <title> In God We Trust </title>\n                </head>\n                <body>\n                    <h1> Webpage using builder pattern </h1>\n<p> A paragraph being built using builder pattern </p>\n                </body>\n            </html>\n        "
-          }
-        }
-      ],
-      "console": [
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "\n            <html>\n                <head>\n                    <title> In God We Trust </title>\n                </head>\n                <body>\n                    <h1> Webpage using builder pattern </h1>\n<p> A paragraph being built using builder pattern </p>\n                </body>\n            </html>\n        \n"
-        }
-      ]
-    },
-    {
-      "id": "qnkX",
-      "code_hash": "7d6f698ffd54dbc0c012706dbc2c0bfa",
+      "code_hash": "1304075ed88798076454d4ff9e4a8786",
       "outputs": [],
       "console": []
     },
     {
-      "id": "PdRw",
-      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/plain": ""
-          }
-        }
-      ],
+      "id": "ZHCJ",
+      "code_hash": "8514b4e48354194924dfdf239edd8a85",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "ROlb",
+      "code_hash": "b961ff41f94e79df26169e3abb1e1a5f",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "qnkX",
+      "code_hash": "d6c0f2a88666117732466f3826c37231",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "TqIu",
+      "code_hash": "7d6f698ffd54dbc0c012706dbc2c0bfa",
+      "outputs": [],
       "console": []
     }
   ]

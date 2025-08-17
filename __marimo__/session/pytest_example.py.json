@@ -1,0 +1,45 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.13.15"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "b7c0bab9af50d9891e89859306e5cc21",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "cbb43c3f11d19d21d04f8163d7456c29",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "qFSd",
+      "code_hash": "7cd838b429470312cb75b55735810223",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<pre style='font-size: 12px'>CompletedProcess(args=[&#x27;pytest&#x27;], returncode=5)</pre>"
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "================================================== test session starts ==================================================\nplatform linux -- Python 3.12.1, pytest-8.4.1, pluggy-1.6.0\nrootdir: /workspaces/python_learning_notebook\nplugins: anyio-4.9.0\ncollected 0 items\n\n================================================= no tests ran in 0.44s =================================================\n"
+        }
+      ]
+    }
+  ]
+}
