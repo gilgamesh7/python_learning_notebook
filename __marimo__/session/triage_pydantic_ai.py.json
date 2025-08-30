@@ -1,0 +1,158 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.13.15"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "46fd137635222e9f966f4e5d92477f4f",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<span class=\"markdown prose dark:prose-invert\"><span class=\"paragraph\"><a href=\"https://youtu.be/-WB0T0XmDrY?si=R-V9UZNrr51N7N45\" rel=\"noopener\" target=\"_blank\">PydanticAI: the AI Agent Framework Winner</a></span>\n<ul>\n<li>Set export OPENAI_API_KEY= on terminal before starting marimo</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "3050ef8f141d24fb38f506c474f6a67c",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "648f3c4d141bd9cdc8ae27c2aea37c7a",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "efa414857dfa5359572b16d22ec0e9ae",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "b49a8c6cbefe37f0f3451c32ead17a6e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "e0fd14229ca67f4c69a0cb0e0e4264e7",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "3e84799ca6bd69b2039d8996c53c13ff",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "09047f0be29755da90d6553a48387369",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "RGSE",
+      "code_hash": "6ce91ed751ae613d5b03d4f4d1246288",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "\n        Name : Diana LowBP\n        Vitals : {'heart_rate': 65, 'blood_pressure': '90/58'}\n        \n"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "response_text=\"Diana, with your current blood pressure reading of 90/58 and symptoms of a headache and fever, it's essential to take special care. You should rest in a comfortable and quiet environment, stay hydrated, and consider taking over-the-counter medication like acetaminophen to reduce fever and alleviate headache pain. Given your low blood pressure, if you experience any dizziness, lightheadedness, or worsening symptoms, it would be advisable to seek medical attention promptly. Please monitor your condition closely.\" escalate=True urgency=7\n"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "response_text='Bob, for a headache and a fever, it is recommended you rest in a comfortable and cool environment, stay hydrated, and take over-the-counter medications like acetaminophen or ibuprofen to reduce fever and alleviate pain. However, if your symptoms persist for more than a day, worsen, or are accompanied by other symptoms such as a rash, confusion, stiff neck, or difficulty breathing, please seek medical attention immediately.' escalate=False urgency=2\n"
+        },
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "response_text='For now, Charlie, you should stay hydrated and rest in a cool, comfortable environment. Over-the-counter fever reducers such as acetaminophen (Tylenol) or ibuprofen (Advil) can be helpful. Keep track of your symptoms. Seek medical attention if your headache is severe or if the fever persists for more than a day, especially considering your high blood pressure history.' escalate=False urgency=2\n"
+        }
+      ]
+    },
+    {
+      "id": "Kclp",
+      "code_hash": null,
+      "outputs": [],
+      "console": []
+    }
+  ]
+}
