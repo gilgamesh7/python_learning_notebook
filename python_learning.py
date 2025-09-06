@@ -289,7 +289,7 @@ def _():
 
     print(page.render())
 
-    return (HTMLPage,)
+    return HTMLPage, dataclass
 
 
 @app.cell
@@ -345,6 +345,102 @@ def _(mo):
 
     mo.Html(styled.to_html())
     # mo.Html(df.to_html())
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(r"""#[10 Standard Library Modules That Make Python Insanely Powerful](https://youtu.be/eZ9RqnkJxsk?si=0spzpzaGT1EOpNrR)""")
+    return
+
+
+@app.cell
+def _(dataclass):
+    # Dataclasses Frozen & nit frozen
+
+    @dataclass
+    class Customer:
+        name: str
+        age: int
+        tier: str
+
+    new_customer = Customer("Vidatdhu Karuppu", 100, "Platinum")
+    print(new_customer)
+    new_customer.name = "Enga Karuppu Samy"
+    print(new_customer)
+
+    @dataclass(frozen=True)
+    class CustomerFrozen:
+        name: str
+        age: int
+        tier: str
+
+    new_customer_f = CustomerFrozen("Vidatdhu Karuppu", 100, "Platinum")
+    print(new_customer_f)
+    new_customer_f.name = "Enga Karuppu Samy"
+
+
+    return
+
+
+@app.cell
+def _():
+    # Pathlib
+
+    from pathlib import Path
+    base = Path("/Users")
+    print(base)
+
+    my_root = base / "vrbabu"
+    print(my_root)
+
+    no_dir = base / "doofus"
+    if no_dir.exists():
+        print(f"{no_dir} exists")
+    else :
+        print(f"{no_dir} does not exist")
+
+    cwd = Path.cwd()
+    print(cwd)
+    for file in cwd.iterdir():
+        if file.is_file():
+            print(file.stat().st_size)
+    return
+
+
+@app.cell
+def _():
+    # functools
+    from functools import cache, partial
+
+    @cache
+    def calculate_power(base: int, exponent:int)-> int:
+        return base ** exponent
+
+    print(calculate_power(2,4))
+
+    calculate_square = partial(calculate_power, exponent=2)
+    print(calculate_square(8))
+    return
+
+
+@app.cell
+def _():
+    # graphlib
+
+    from graphlib import TopologicalSorter
+
+    ts = TopologicalSorter[str]()
+
+    ts.add("compile", "fetch_sources")
+    ts.add("test", "compile")
+    ts.add("package", "test")
+    ts.add("deploy", "package")
+    ts.add("fetch_sources")
+
+    order = list(ts.static_order())
+
+    print(f"Execution Order : {order}")
     return
 
 

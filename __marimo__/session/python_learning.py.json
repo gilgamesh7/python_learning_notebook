@@ -117,6 +117,68 @@
       "code_hash": "7d6f698ffd54dbc0c012706dbc2c0bfa",
       "outputs": [],
       "console": []
+    },
+    {
+      "id": "Vxnm",
+      "code_hash": "8dfa22549a89f22bd537831fbf2c09ae",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "DnEU",
+      "code_hash": "4b085b6339758381f493917f3707cedd",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "ulZA",
+      "code_hash": "30daca0037a775b13acf6958c080438b",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "NDCy",
+      "code_hash": null,
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "16\n64\n"
+        }
+      ]
+    },
+    {
+      "id": "ecfG",
+      "code_hash": "aa46a9646fcd6c754e837dcfebe0ba24",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "mjOh",
+      "code_hash": "138db7cf61125d87a62b785f8fc607bc",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Execution Order : ['fetch_sources', 'compile', 'test', 'package', 'deploy']\n"
+        }
+      ]
     }
   ]
 }
