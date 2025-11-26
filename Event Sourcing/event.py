@@ -2,7 +2,7 @@
 # https://youtu.be/t-LC1dWLpNs?si=5DNFJqSoUokAKper
 
 from enum import StrEnum
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import datetime
 
 class EventType(StrEnum):

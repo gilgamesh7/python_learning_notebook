@@ -13,7 +13,15 @@ class Inventory:
 
     def get_items(self) -> list[tuple[str, int]] :
         counts = Counter[str]()
-        for event in self.store.get_events():
+        for event in self.store.get_all_events():
             if event.type == EventType.ITEM_ADDED:
                 counts[event.data] += 1
-        return list(counts.items())
+            elif event.type == EventType.ITEM_REMOVED:
+                counts[event.data] -= 1
+
+        return [
+            (item, count) for item, count in counts.items() if count > 0
+        ]
+        
+    def get_count(self, item:str) -> int :
+        return dict(self.get_items()).get(item,0)
