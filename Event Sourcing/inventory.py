@@ -11,6 +11,12 @@ class Inventory:
         event = Event(type=EventType.ITEM_ADDED,data=item)
         self.store.append(event)
 
+    def remove_item(self,item: str) -> None :
+        if self.get_count(item) <= 0:
+            raise ValueError(f"Item '{item}' not in inventory.")
+        event = Event(type=EventType.ITEM_REMOVED,data=item)
+        self.store.append(event)
+
     def get_items(self) -> list[tuple[str, int]] :
         counts = Counter[str]()
         for event in self.store.get_all_events():
