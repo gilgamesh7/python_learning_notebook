@@ -2,6 +2,7 @@ from event import Event,EventType
 from event_store import EventStore
 
 from collections import Counter
+from functools import cache
 
 class Inventory:
     def __init__(self, store: EventStore)-> None :
@@ -10,6 +11,7 @@ class Inventory:
     def add_item(self,item: str) -> None :
         event = Event(type=EventType.ITEM_ADDED,data=item)
         self.store.append(event)
+        self._invalidate_cache()
 
     def remove_item(self,item: str) -> None :
         if self.get_count(item) <= 0:
@@ -17,6 +19,12 @@ class Inventory:
         event = Event(type=EventType.ITEM_REMOVED,data=item)
         self.store.append(event)
 
+        self._invalidate_cache()
+
+    def _invalidate_cache(self) -> None :
+        self.get_items.cache_clear()
+
+    @cache
     def get_items(self) -> list[tuple[str, int]] :
         counts = Counter[str]()
         for event in self.store.get_all_events():
