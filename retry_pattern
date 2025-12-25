@@ -5,6 +5,8 @@ import random
 import httpx
 
 from typing import TypedDict, List, Callable
+from functools import wraps
+
 
 class ChuckNorrisJoke(TypedDict):
     categories: List[str]
@@ -14,6 +16,27 @@ class ChuckNorrisJoke(TypedDict):
     updated_at: str
     url: str
     value: str
+
+def retry_decorator(retries: int = 3, delay: float = 1.0, backoff: float = 1.0):
+    def decorator[T](func: Callable[..., T]) -> Callable[..., T]:
+        @wraps(func)
+        def wrapper(*args: List, **kwargs: dict) :
+            for attempt in range(1, retries+1):
+                try:
+                    return func()
+                except Exception as e:
+                    print(f"Attempt {attempt} failed: {e}")
+                    if attempt == retries:
+                        raise
+                    import time
+                    sleep_time: float = delay * (backoff ** (attempt - 1))
+                    print(f"Retrying in {sleep_time:.1f} seconds...")
+                    time.sleep(sleep_time)
+            raise Exception(f"Operation failed after {retries} attempts")
+
+        return wrapper
+
+    return decorator
 
 def retry[T](operation: Callable[[], T], retries: int = 3, delay: float = 1.0, backoff: float = 1.0) -> T:
     """ Retry an operation a number of times with a delay """
@@ -45,9 +68,25 @@ def fetch_joke()-> str:
         data : ChuckNorrisJoke = response.json()
         return data["value"]
 
+@retry_decorator()
+def fetch_joke_decorated()-> str:
+    """ Fecth a Chuck Norris Joke froma public API """
+
+    # randomly raise errors to simulate a flaky API
+    if random.choice([0, 1, 2, 3, 4]) == 0:
+        raise httpx.HTTPError("Chuck Norris is not happy - Simulated API failure")
+
+    with httpx.Client() as client:
+        response = client.get("https://api.chucknorris.io/jokes/random")
+        response.raise_for_status()
+        data : ChuckNorrisJoke = response.json()
+        return data["value"]
+
 def main()-> None:
     joke = retry(fetch_joke, retries=5, delay=2.0)
-    print(fetch_joke())
+    print(joke)
+    joke = fetch_joke_decorated()
+    print(joke)
 
 if __name__ == "__main__":
     main()
