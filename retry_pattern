@@ -15,17 +15,20 @@ class ChuckNorrisJoke(TypedDict):
     url: str
     value: str
 
-def retry[T](operation: Callable[[], T], retries: int = 3, delay: float = 1.0) -> T:
+def retry[T](operation: Callable[[], T], retries: int = 3, delay: float = 1.0, backoff: float = 1.0) -> T:
     """ Retry an operation a number of times with a delay """
 
     for attempt in range(1, retries+1):
         try:
             return operation()
         except Exception as e:
-            print(f"Attempt {attempt + 1} failed: {e}")
-            if attempt < retries:
-                import time
-                time.sleep(delay)
+            print(f"Attempt {attempt} failed: {e}")
+            if attempt == retries:
+                raise
+            import time
+            sleep_time: float = delay * (backoff ** (attempt - 1))
+            print(f"Retrying in {sleep_time:.1f} seconds...")
+            time.sleep(sleep_time)
     raise Exception(f"Operation failed after {retries} attempts")
 
 
@@ -33,7 +36,7 @@ def fetch_joke()-> str:
     """ Fecth a Chuck Norris Joke froma public API """
 
     # randomly raise errors to simulate a flaky API
-    if random.choice([0, 1, 2, 3, 4, 5, 6 , 7 , 8]) == 0:
+    if random.choice([0, 1, 2, 3, 4]) == 0:
         raise httpx.HTTPError("Chuck Norris is not happy - Simulated API failure")
 
     with httpx.Client() as client:
