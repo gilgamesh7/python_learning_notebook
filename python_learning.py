@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.13.15"
+__generated_with = "0.18.4"
 app = marimo.App(width="medium")
 
 
@@ -22,7 +22,9 @@ def _():
 
 @app.cell
 def _(mo):
-    mo.md(r"""# [Ways to Define Functions in Python](https://youtu.be/OdDI-5PBpSk?si=FC0bBIxiOYGxaL5x)""")
+    mo.md(r"""
+    # [Ways to Define Functions in Python](https://youtu.be/OdDI-5PBpSk?si=FC0bBIxiOYGxaL5x)
+    """)
     return
 
 
@@ -91,7 +93,6 @@ def _():
         return number*2
 
     double(15)
-
     return
 
 
@@ -105,7 +106,6 @@ def _():
 
     greet_dunder = Greeter()
     print(greet_dunder("Kristin"))
-
     return
 
 
@@ -209,13 +209,14 @@ def _(types):
 
     print(func(5))  # ✅ Output: 47
 
-
     return
 
 
 @app.cell
 def _(mo):
-    mo.md(r"""# [Class methods in APIs](https://youtu.be/Ov8JsEnNLCM?si=ZMUopDQZtXcfHAIw)""")
+    mo.md(r"""
+    # [Class methods in APIs](https://youtu.be/Ov8JsEnNLCM?si=ZMUopDQZtXcfHAIw)
+    """)
     return
 
 
@@ -251,13 +252,14 @@ def _():
     # [User(id='04aaff2c-96fe-45a5-a44d-ac7c5ff19900', name='John Doe', email='john.doe@example.com'), User(id='b2fc851d-8edd-40ac-9d0f-0bee655a5f77', name='Jane Smith', email='jane.smith@example.com'), User(id='dc7e0322-a646-41c1-b525-e9b18eb3e18c', name='Raj Patel', email='raj.patel@example.com')]
 
     # [{'id': '33c38c93-6305-457e-984c-8eb35b75c54b', 'name': 'John Doe', 'email': 'john.doe@example.com'}, {'id': '64bd7a22-ae67-469d-9501-7d370e3c0f1a', 'name': 'Jane Smith', 'email': 'jane.smith@example.com'}, {'id': '9a69fd31-2961-43c0-989d-5653f71c3b89', 'name': 'Raj Patel', 'email': 'raj.patel@example.com'}]
-
     return
 
 
 @app.cell
 def _(mo):
-    mo.md(r"""**[Builder for HTML page](https://youtu.be/2f1FkGQTarc?si=EKWlKxoA1b7lBkCS)**""")
+    mo.md(r"""
+    **[Builder for HTML page](https://youtu.be/2f1FkGQTarc?si=EKWlKxoA1b7lBkCS)**
+    """)
     return
 
 
@@ -288,7 +290,6 @@ def _():
     )
 
     print(page.render())
-
     return HTMLPage, dataclass
 
 
@@ -350,7 +351,9 @@ def _(mo):
 
 @app.cell
 def _(mo):
-    mo.md(r"""#[10 Standard Library Modules That Make Python Insanely Powerful](https://youtu.be/eZ9RqnkJxsk?si=0spzpzaGT1EOpNrR)""")
+    mo.md(r"""
+    #[10 Standard Library Modules That Make Python Insanely Powerful](https://youtu.be/eZ9RqnkJxsk?si=0spzpzaGT1EOpNrR)
+    """)
     return
 
 
@@ -378,7 +381,6 @@ def _(dataclass):
     new_customer_f = CustomerFrozen("Vidatdhu Karuppu", 100, "Platinum")
     print(new_customer_f)
     new_customer_f.name = "Enga Karuppu Samy"
-
 
     return
 
@@ -442,6 +444,50 @@ def _():
 
     print(f"Execution Order : {order}")
     return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""
+    ### [Using lambda functions to check approvals](https://www.youtube.com/watch?v=b6RnBKvQ40o)
+    """)
+    return
+
+
+@app.cell
+def _():
+    from dataclasses import dataclass
+
+    @dataclass
+    class User:
+        name: str
+        is_premium: bool
+        is_admin: bool
+
+    def approve_user(user: User)-> str:
+        rejection_rules = [
+            lambda : not user.is_premium,
+            lambda : not user.is_admin
+        ]
+
+        if any(rule() for rule in rejection_rules):
+            return "Rejected"
+
+        return "Approved"
+
+    def main()-> None:
+        user_1 = User("Rajesh", True, True)
+        print(approve_user(user_1))
+
+        user_2 = User("Buttons", True, False)
+        print(approve_user(user_2))
+    
+        user_3 = User("Red", False, True)
+        print(approve_user(user_2))
+
+    if __name__ == "__main__":
+        main()
+    return (dataclass,)
 
 
 if __name__ == "__main__":

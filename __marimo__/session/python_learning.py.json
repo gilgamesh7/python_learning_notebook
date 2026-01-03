@@ -1,13 +1,20 @@
 {
   "version": "1",
   "metadata": {
-    "marimo_version": "0.13.15"
+    "marimo_version": "0.18.4"
   },
   "cells": [
     {
       "id": "Hbol",
       "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -19,7 +26,14 @@
     {
       "id": "vblA",
       "code_hash": "d5eb3b3f511912a58300a024c9c85d8f",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"ways-to-define-functions-in-python\"><a href=\"https://youtu.be/OdDI-5PBpSk?si=FC0bBIxiOYGxaL5x\" rel=\"noopener noreferrer\" target=\"_blank\">Ways to Define Functions in Python</a></h1></span>"
+          }
+        }
+      ],
       "console": []
     },
     {
@@ -42,13 +56,13 @@
     },
     {
       "id": "Xref",
-      "code_hash": "bfd537caedf5384e16e3761041d3325d",
+      "code_hash": "114826b7692c3cd80eff6385b72fe3b9",
       "outputs": [],
       "console": []
     },
     {
       "id": "SFPL",
-      "code_hash": "6ff3653ece098ab1d360661b955854bc",
+      "code_hash": "ed88466fffbc7cc4af974fca877453c5",
       "outputs": [],
       "console": []
     },
@@ -78,31 +92,45 @@
     },
     {
       "id": "Hstk",
-      "code_hash": "3efe386c30557b06bf1e92ec26354df7",
+      "code_hash": "7ae784c536ebc183a1ab023b06681e13",
       "outputs": [],
       "console": []
     },
     {
       "id": "nWHF",
       "code_hash": "bf898cb3b20298652ffcaef717334b99",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"class-methods-in-apis\"><a href=\"https://youtu.be/Ov8JsEnNLCM?si=ZMUopDQZtXcfHAIw\" rel=\"noopener noreferrer\" target=\"_blank\">Class methods in APIs</a></h1></span>"
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "iLit",
-      "code_hash": "1304075ed88798076454d4ff9e4a8786",
+      "code_hash": "c574338651fbfca8b1685155b99d2b47",
       "outputs": [],
       "console": []
     },
     {
       "id": "ZHCJ",
       "code_hash": "8514b4e48354194924dfdf239edd8a85",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\"><strong><a href=\"https://youtu.be/2f1FkGQTarc?si=EKWlKxoA1b7lBkCS\" rel=\"noopener noreferrer\" target=\"_blank\">Builder for HTML page</a></strong></span></span>"
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "ROlb",
-      "code_hash": "b961ff41f94e79df26169e3abb1e1a5f",
+      "code_hash": "2cea51e5ddb2ad8f0abb72375573832f",
       "outputs": [],
       "console": []
     },
@@ -121,12 +149,19 @@
     {
       "id": "Vxnm",
       "code_hash": "8dfa22549a89f22bd537831fbf2c09ae",
-      "outputs": [],
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"10-standard-library-modules-that-make-python-insanely-powerful\"><a href=\"https://youtu.be/eZ9RqnkJxsk?si=0spzpzaGT1EOpNrR\" rel=\"noopener noreferrer\" target=\"_blank\">10 Standard Library Modules That Make Python Insanely Powerful</a></h1></span>"
+          }
+        }
+      ],
       "console": []
     },
     {
       "id": "DnEU",
-      "code_hash": "4b085b6339758381f493917f3707cedd",
+      "code_hash": "dca9c7c26334a52d9236bd960f27298f",
       "outputs": [],
       "console": []
     },
@@ -137,33 +172,33 @@
       "console": []
     },
     {
-      "id": "NDCy",
-      "code_hash": null,
-      "outputs": [
-        {
-          "type": "data",
-          "data": {
-            "text/plain": ""
-          }
-        }
-      ],
-      "console": [
-        {
-          "type": "stream",
-          "name": "stdout",
-          "text": "16\n64\n"
-        }
-      ]
-    },
-    {
       "id": "ecfG",
       "code_hash": "aa46a9646fcd6c754e837dcfebe0ba24",
       "outputs": [],
       "console": []
     },
     {
-      "id": "mjOh",
+      "id": "Pvdt",
       "code_hash": "138db7cf61125d87a62b785f8fc607bc",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "VjWu",
+      "code_hash": "1b4c45b7c7da4074f9dc2bf7651d0ebc",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"using-lambda-functions-to-check-approvals\"><a href=\"https://www.youtube.com/watch?v=b6RnBKvQ40o\" rel=\"noopener noreferrer\" target=\"_blank\">Using lambda functions to check approvals</a></h3></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bqdR",
+      "code_hash": "b42091d4fd46397ba5cbc8a538a2b2e8",
       "outputs": [
         {
           "type": "data",
@@ -176,7 +211,8 @@
         {
           "type": "stream",
           "name": "stdout",
-          "text": "Execution Order : ['fetch_sources', 'compile', 'test', 'package', 'deploy']\n"
+          "text": "Approved\nRejected\nRejected\n",
+          "mimetype": "text/plain"
         }
       ]
     }
