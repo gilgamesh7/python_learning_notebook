@@ -1,0 +1,26 @@
+{
+    "title": "Example JSON File 3",
+    "description": "This is an example JSON file for demonstration purposes.",
+    "items": [
+        {
+            "id": 1,
+            "name": "Item One",
+            "value": 100
+        },
+        {
+            "id": 2,
+            "name": "Item Two",
+            "value": 200
+        },
+        {
+            "id": 3,
+            "name": "Item Three",
+            "value": 300
+        }
+    ],
+    "metadata": {
+        "created_at": "2023-10-01T12:00:00Z",
+        "updated_at": "2023-10-01T12:00:00Z",
+        "author": "gilgamesh7"
+    }
+}

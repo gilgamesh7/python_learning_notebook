@@ -1,0 +1,28 @@
+{
+    "name": "Example JSON File",
+    "version": "1.0.0",
+    "description": "A sample JSON structure for learning purposes",
+    "author": {
+        "name": "Developer",
+        "email": "dev@example.com"
+    },
+    "items": [
+        {
+            "id": 1,
+            "title": "First Item",
+            "status": "active",
+            "tags": ["important", "urgent"]
+        },
+        {
+            "id": 2,
+            "title": "Second Item",
+            "status": "inactive",
+            "tags": ["archived"]
+        }
+    ],
+    "metadata": {
+        "created": "2024-01-01T00:00:00Z",
+        "updated": "2024-01-15T12:30:00Z",
+        "count": 2
+    }
+}

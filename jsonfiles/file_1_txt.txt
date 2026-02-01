@@ -1,0 +1,4 @@
+This is an example text file.
+It contains multiple lines of text.
+You can use it to test reading and writing operations.
+Feel free to modify this content as needed.
